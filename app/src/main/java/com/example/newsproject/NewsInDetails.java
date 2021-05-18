@@ -25,7 +25,5 @@ public class NewsInDetails extends AppCompatActivity {
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl(url);
-
-
     }
 }

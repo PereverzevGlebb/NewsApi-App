@@ -40,9 +40,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
         final Articles art = articles.get(position);
         String url = art.getUrl();
-        holder.newsTitle.setText(art.getTitle());
-        holder.newsDate.setText(art.getPublishedAt());
-
         String imageUrl = art.getUrlToImage();
         Picasso.get().load(imageUrl).into(holder.imageView);
         holder.cardView.setOnClickListener(new View.OnClickListener() {
@@ -62,14 +59,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView newsTitle;
-        TextView newsDate;
         ImageView imageView;
         CardView cardView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            newsDate = itemView.findViewById(R.id.newsDate);
-            newsTitle = itemView.findViewById(R.id.newsTitle);
             imageView = itemView.findViewById(R.id.imageShow);
             cardView = itemView.findViewById(R.id.cardView);
         }

@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.Button;
+
 import android.widget.Toast;
 
 import com.example.newsproject.parametr.Articles;
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     Adapter adapter;
     final String API_KEY = "5f249efa37ec475f989920f8ffefa7fb";
-    Button updateButton;
+
     List<Articles> articles = new ArrayList<>();
 
     @Override
@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.recycleView);
-        updateButton = findViewById(R.id.button);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         final String country = getCountry();
         fetchJSON(country, API_KEY);
